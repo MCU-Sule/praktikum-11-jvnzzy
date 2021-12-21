@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="2172014 Fabio" />
+    <title>Soal4</title>
+  </head>
+  <style>
+    .kotak {
+      width: 400px;
+      border: 1px solid black;
+      height: 150px;
+    }
+  </style>
+  <body>
+    <div class="kotak"></div>
+    <div class="pilihan">
+      <button id="batu" value="Batu" onclick="playerjalanbatu()">Batu</button>
+      <button id="gunting" value="Gunting" onclick="playerjalangunting()">
+        Gunting
+      </button>
+      <button id="kertas" value="Kertas" onclick="playerjalankertas()">
+        Kertas
+      </button>
+    </div>
+    <script>
+      const random = [batu, gunting, kertas];
+      let nyawa1 = [];
+      let nyawa2 = [];
+      let math = Math.floor(Math.random() * 3); //Random angka 0-2
+      function nyawa() {
+        document.getElementById("life1").innerHTML = nyawa1;
+        document.getElementById("life2").innerHTML = nyawa2;
+        console.log(nyawa1);
+        console.log(nyawa2);
+        if (nyawa2[0] == " 🦁") {
+          document.querySelector(".pemenang").innerHTML = "Computer Win";
+          document.querySelector("#batu").onclick = "";
+          document.querySelector("#gunting").onclick = "";
+          document.querySelector("#kertas").onclick = "";
+        } else if (nyawa1[0] == " 🦈") {
+          document.querySelector(".pemenang").innerHTML = "Player Win";
+          document.querySelector("#batu").onclick = "";
+          document.querySelector("#gunting").onclick = "";
+          document.querySelector("#kertas").onclick = "";
+        }
+      }
+    </script>
+  </body>
+</html>
