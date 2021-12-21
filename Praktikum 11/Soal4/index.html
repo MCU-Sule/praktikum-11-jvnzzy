@@ -27,9 +27,9 @@
       const random = [batu, gunting, kertas];
       let nyawa1 = [];
       let nyawa2 = [];
-      let math = Math.floor(Math.random() * 3); //Random angka 0-2
+      let math = Math.floor(Math.random() * 3);
       function suit() {
-        if (nyawa2[0] == " 🦁") {
+        if (nyawa2[0] == "") {
           document.querySelector(".pemenang").innerHTML = "Computer Win";
           document.querySelector("#batu").onclick = "";
           document.querySelector("#gunting").onclick = "";
